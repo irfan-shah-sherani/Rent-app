@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body, html {
+    height: 100%;
+  }
+  
+  .container {
+    display:flex;
+    height: 100vh;
+  }
+  .sub-container{
+    display: flex;
+    flex-direction: column;
+  }
+ .sidebar {
+    width: 220px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+  }
+  .sidebar h1 {
+    margin-bottom: 20px;
+    font-size: 26px;
+    color: #333;
+  }
+  
+  .sidebar-menu {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sidebar-menu a {
+    text-decoration: none;
+    padding: 10px 15px;
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  .sidebar-menu a i {
+    margin-right: 10px;
+    font-size: 25px;
+  }
+  
+  .sidebar-menu a:hover {
+    color: #007bff;
+    border: 2px solid #007bff;
+    border-radius: 5px;         
+    padding: 8px;              
+    background-color: #e6f0ff;
+  }
+  
+  .active, .sidebar-menu a.active {
+    text-decoration: none;
+    color: #007bff;
+    border: 2px solid #007bff; 
+    border-radius: 5px;         
+    padding: 8px;              
+    background-color: #e6f0ff;
+  }
+  .main-content {
+    flex: 1;
+    padding: 20px;
+    margin-top: 100px;
+  }
+  
+  .main-content h1 {
+    margin-bottom: 30px;
+    font-size: 28px;
+  }
+  
+  .property-table {
+    height: auto;
+    width: 80%;
+    border-collapse:collapse;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .property-table th, .property-table td {
+    border: 1px solid #ddd;
+    border: black 1px solid;
+    border-radius: 4px;
+    padding: 12px;
+    text-align: center;
+  }
+  
+  .property-table th {
+    background-color: #f9f9f9;
+    border: black 1px solid;
+    border-radius: 4px;
+  }
+  
+  .property-table button {
+    padding: 6px 12px;
+    border: none;
+    background-color: #007bff;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .property-table button:hover {
+    background-color: #0056b3;
+  }
+  
+  .add-property-btn {
+    text-align: left;
+    margin-left: 2%;
+    margin-top: 20px;
+    
+  }
+  
+  .add-property-btn button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background: rgb(60, 184, 35);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .add-property-btn button:hover {
+    background-color: #229e1e;
+  } 
+  
+  /* profile */
+
+  .main-content {
+    max-width: 800px;
+    margin: 50px;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .profile-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+  }
+
+  .profile-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  .profile-picture {
+    flex: 1;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .profile-picture .img {
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #000000;
+    margin-bottom: 10px;
+  }
+  
+  #uploadImage {
+    display: block;
+    margin: 10px auto;
+  }
+
+  .profile-info {
+    flex: 2;
+  }
+
+  .profile-info label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #555;
+  }
+
+  .profile-info input {
+    width: 100%;
+    padding: 8px 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+
+  .profile-actions {
+    margin-top: 20px;
+  }
+
+  .profile-actions button {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .profile-actions button:hover {
+    background-color: #45a049;
+  }
+/* add property */
+.add-property-container {
+  max-width: 800px;
+  margin: 50px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.add-property-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
+}
+
+.property-form label {
+  display: block;
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
+
+.property-form input[type="text"],
+.property-form select,
+.property-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.form-grid {
+  display: flex;
+  gap: 40px;
+}
+
+.form-column {
+  flex: 1;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.image-upload {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.img-box {
+  background: #eaeaea;
+}

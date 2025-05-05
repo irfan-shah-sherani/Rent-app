@@ -1,0 +1,454 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, sans-serif;
+    /* background-color: #ef3030; */
+}
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+.title{
+    display: flex;
+    align-items: center;
+}
+.main-content{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+.rental-info{
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 20px 0;
+    width: 70%;
+    height: auto;
+    background-color: #f4f4f4;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    gap: 12px;
+}
+.rental-info:hover {
+    background-color: #e0e0e0; 
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.rental-info .image{
+    background-image: url(/Rent/client/assets/home/bac1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 400px;
+    background-color: #ce2323;
+    margin-bottom: 10px;
+}
+.Rent{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 20px;
+    gap: 10px;
+}
+.Rent p{
+    color: #333;
+    font-size: 1.2em;
+}
+.location{
+    display: flex;
+    padding-left: 20px;
+    color: #333;
+    font-size: 1.2em;
+    gap: 10px;
+}
+.description{
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #333;
+    font-size: 1em;
+    gap: 4px;
+}
+.amenities{
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    color: #333;
+    font-size: 1.2em;
+    gap: 10px;
+}
+.amenities ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.amenities ul li{
+    padding: 5px 10px;
+    border: 1px solid #050505;
+    border-radius: 5px;
+    color: #050505;
+    transition: 0.3s;
+}
+.amenities ul li:hover{
+    transform: scale(1.05);
+    
+    cursor: pointer;
+}
+.amenities ul li:focus{
+    background-color: #050505;
+    color: #ffffff;
+}
+
+.user-info {
+    width: 28%;
+    height: 350px;
+    background-color: #f4f4f4;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+.user-info .image {
+    display: flex;
+    justify-content: center;
+    padding: 5px 0 10px 0;
+    
+}
+.user-info .user-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;  
+    border: 3px solid #ccc;
+}
+.user-info p {
+    margin: 4px 0; 
+    font-size: 14px;  
+    color: #333;
+}
+.user-info p:first-of-type {
+    font-weight: bold;
+    font-size: 16px;
+    color: #050505;
+}
+.user-info:hover {
+    background-color: #e0e0e0; 
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.email{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.phone{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.title i{
+    color: #333;
+    font-size: 2em;
+    margin-right: 10px;
+}
+
+/* nav bar */
+/* nav bar */
+.nav-bar {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.15); /* Transparent */
+    backdrop-filter: blur(10px); /* Blurry glass effect */
+    padding: 0 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.logobar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+    border-radius: 5px;
+}
+
+.logobar p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #222;
+}
+
+/* Navigation Links */
+.side {
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.side a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.side a:hover {
+    color: #007bff;
+}
+
+/* Hamburger Menu Icon (Hidden by default on larger screens) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.background-slider {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Dark Overlay */
+.overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Centered Heading */
+.content {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.content h1 {
+    font-size: 3.5rem;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+/* Search Bar Container */
+.search-bar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 700px;
+    width: 90%;
+    z-index: 2;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Row Structure */
+.search-bar-row1,
+.search-bar-row2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+/* Input & Select Wrappers */
+.item {
+    flex: 1;
+    min-width: 150px;
+    height: 50px;
+    padding: 5px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Hidden Labels */
+.item label {
+    display: none;
+}
+
+/* Text Inputs */
+input[type="text"],
+select {
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+/* Dropdown Specific */
+select {
+    appearance: none;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Button Styling */
+button {
+    width: 100%;
+    height: 50px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Navbar */
+    .nav-bar {
+        flex-direction: column;
+        padding: 10px 20px;
+        justify-content: flex-start;
+    }
+
+    .side {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        display: none; /* Initially hidden */
+        margin-top: 10px;
+    }
+
+    .side a {
+        font-size: 16px;
+        padding: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger icon on small screens */
+    }
+
+    .side.active {
+        display: flex; /* Show links when menu is active */
+    }
+
+    /* Hero Section */
+    .background-slider {
+        height: 80vh;
+    }
+
+    .content h1 {
+        font-size: 2.5rem;
+    }
+
+    /* Search Bar */
+    .search-bar {
+        padding: 15px;
+    }
+
+    .item {
+        min-width: 100%;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Navbar */
+    .nav-bar {
+        padding: 10px 5px;
+    }
+
+    .logobar p {
+        font-size: 18px;
+    }
+
+    .side {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .side a {
+        font-size: 14px;
+        padding: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Hero Section */
+    .background-slider {
+        height: 70vh;
+    }
+
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    /* Search Bar */
+    .search-bar {
+        padding: 10px;
+    }
+
+    .item {
+        min-width: 100%;
+        height: 40px;
+    }
+
+    button {
+        font-size: 13px;
+    }
+}

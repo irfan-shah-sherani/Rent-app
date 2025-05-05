@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Search page</title>
+  <link rel="stylesheet" href="/Rent/client/css/index.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- ================= NAVBAR SECTION ================= -->
+  <div class="nav-bar">
+    <div class="logobar">
+      <div class="logo">
+        <div class="img"></div>
+      </div>
+      <p>H_RENT</p>
+    </div>
+
+    <div class="hamburger">
+      <i id="hamburger-icon" class="fas fa-bars"></i>
+    
+      <div id="side-menu" class="side">
+      <div><a href="index.html">Home</a></div>
+      <div><a href="Listings.html">Listings</a></div>
+      <div class="search">
+        <input type="text" placeholder="Search" class="search-input"/>
+        <i class="fa-solid fa-magnifying-glass"></i></div>
+    </div>
+  </div>
+    <div class="user">
+      <div class="user-icon"><i class="fa-solid fa-user"></i></div>
+      <div class="user-name">User</div>
+      <div class="user-dropdown">
+        <div class="dropdown-content">
+          <a href="#">Profile</a>
+          <a href="#">Settings</a>
+          <a href="#">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= HERO SECTION ================= -->
+   <!-- Hero section with background image and overlay -->
+  <div class="hero-section">
+
+      <!-- Dark overlay for text readability -->
+      <div class="overlay"></div>
+      
+      <!-- Main heading content -->
+      <div class="content">
+        <h1>Find Your Perfect Rental</h1>
+      </div>
+
+      <!-- ================= SEARCH BAR SECTION ================= -->
+      <form class="search-bar" action="Listings.html" method="GET">
+        <!-- First row of search inputs -->
+            <div class="item search-city">                                    
+                <label for="city">City</label>
+                <select id="city" name="city" class="city-select" required>
+                    <option value="">Choose City</option>
+                    <option value="lahore">Lahore</option>
+                    <option value="karachi">Karachi</option>
+                    <option value="islamabad">Islamabad</option>
+                    <option value="peshawar">Peshawar</option>
+                    <option value="quetta">Quetta</option>
+                </select>
+            </div>
+    
+            <div class="item search-location">
+                <label for="location">Location</label>
+                <input id="location" name="location" type="text" 
+                       placeholder="Enter location" class="location-input">
+            </div>
+    
+        <!-- Second row of search inputs -->
+            <div class="item search-type">
+                <label for="type">Type</label>
+                <select id="type" name="type" class="type-select" required>
+                    <option value="">Choose Type</option>
+                    <option value="house">House</option>
+                    <option value="apartment">Apartment</option>
+                    <option value="flat">Flat</option>
+                    <option value="room">Room</option>
+                    <option value="office">Office</option>
+                    <option value="shop">Shop</option>
+                </select>
+            </div>
+    
+            <div class="item search-price">
+                <label for="price">Price</label>
+                <input id="price" name="price" type="text" 
+                       placeholder="Enter price" class="price-input">
+            </div>
+    
+            <!-- Search button -->
+            <button type="submit">Find</button>
+            
+    </form>
+    </div>
+  </div>
+      <script > 
+      const hamburger = document.getElementById("hamburger-icon");
+      const sideMenu = document.getElementById("side-menu");
+
+      hamburger.addEventListener("click", () => {
+        sideMenu.style.display = sideMenu.style.display === "flex" ? "none" : "flex";
+      });
+
+      // Optional: hide menu when clicking outside (mobile only)
+      document.addEventListener("click", function (event) {
+        if (!sideMenu.contains(event.target) && !hamburger.contains(event.target)) {
+          if (window.innerWidth <= 480) {
+            sideMenu.style.display = "none";
+          }
+        }
+      });
+
+      </script>
+</body>
+</html>

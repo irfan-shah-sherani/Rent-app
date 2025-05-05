@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+  /* Body Styling */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('/Rent/client/assets/Register/b.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .container {
+    background: white;
+    border: 2px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgb(0, 0, 0);
+    width: 100%;
+    max-width: 400px;
+  }
+  .container h2 {
+    width: 50%;
+    font-size: 33px;
+    height: 45px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+    background:transparent;
+    border-radius: 10px;
+    margin:0 auto
+  }
+
+  form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #000000;
+    font-size: 16px;
+  }
+
+  form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+  }
+  form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+
+  .container button {
+    width: 50%;
+    padding: 10px;
+    background: #2792f7;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    margin : 0 auto;
+    display: block;
+  }
+  
